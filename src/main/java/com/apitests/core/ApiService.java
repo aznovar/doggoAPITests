@@ -4,8 +4,11 @@ import com.apitests.model.BaseResponse;
 import com.apitests.model.auth.RegistrationModel;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.FieldMap;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+
+import java.util.Map;
 
 public interface ApiService {
 
@@ -13,6 +16,6 @@ public interface ApiService {
 
     @Headers("Content-Type: application/json")
     @POST(REGISTRATION_ENDPOINT)
-    Call<BaseResponse> register(@Body RegistrationModel registrationModel);
+    Call<BaseResponse> register(@FieldMap Map<String, String> params);
 
 }
