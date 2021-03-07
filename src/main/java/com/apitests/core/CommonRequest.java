@@ -1,5 +1,6 @@
 package com.apitests.core;
 
+import com.google.inject.Singleton;
 import lombok.extern.slf4j.Slf4j;
 import retrofit2.Call;
 import retrofit2.Response;
@@ -7,6 +8,7 @@ import retrofit2.Response;
 import java.io.IOException;
 
 @Slf4j
+@Singleton
 public class CommonRequest {
 
     public void make(Call call){
