@@ -10,7 +10,6 @@ import java.util.Map;
 public class AuthRequestsImpl implements AuthRequests {
 
     private final ApiService apiService;
-
     private final CommonRequest commonRequest;
 
     @Inject
