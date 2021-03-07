@@ -1,8 +1,8 @@
 package com.apitests.remote.auth;
 
-public interface AuthRequests {
+public interface AuthRequests<T> {
 
-    void register(String username, String password);
+    void register(T t);
 
     void login(String username, String password);
 }

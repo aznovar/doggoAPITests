@@ -51,5 +51,4 @@ public class ServiceFactory implements Provider<ApiService> {
         return httpLoggingInterceptors;
     }
 
-
 }

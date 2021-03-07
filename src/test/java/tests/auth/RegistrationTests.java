@@ -1,6 +1,7 @@
 package tests.auth;
 
 import com.apitests.core.ApiModule;
+import com.apitests.model.auth.RegistrationModel;
 import com.apitests.remote.auth.AuthRequests;
 import com.google.inject.Inject;
 import org.testng.annotations.Guice;
@@ -14,7 +15,9 @@ public class RegistrationTests {
 
     @Test
     public void doRegister(){
-        authRequests.register("fromRetrofit", "wertunec");
+        RegistrationModel registrationModel = new RegistrationModel();
+        registrationModel.setUsername("ugauga@uga.ru");
+        registrationModel.setPassword("wertunec");
+        authRequests.register(registrationModel);
     }
-
 }

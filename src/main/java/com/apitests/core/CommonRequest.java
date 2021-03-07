@@ -7,7 +7,6 @@ import retrofit2.Response;
 
 import java.io.IOException;
 
-@Slf4j
 @Singleton
 public class CommonRequest {
 

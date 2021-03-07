@@ -2,12 +2,13 @@ package com.apitests.remote.auth;
 
 import com.apitests.core.ApiService;
 import com.apitests.core.CommonRequest;
+import com.apitests.model.auth.RegistrationModel;
 import com.google.inject.Inject;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class AuthRequestsImpl implements AuthRequests {
+public class AuthRequestsImpl implements AuthRequests<RegistrationModel> {
 
     private final ApiService apiService;
     private final CommonRequest commonRequest;
@@ -19,8 +20,8 @@ public class AuthRequestsImpl implements AuthRequests {
     }
 
     @Override
-    public void register(String username, String password) {
-        commonRequest.make(apiService.register(collectMapForRegisterRequest(username,password)));
+    public void register(RegistrationModel registrationModel) {
+        commonRequest.make(apiService.register(registrationModel));
     }
 
     @Override
