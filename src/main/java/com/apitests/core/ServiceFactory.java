@@ -1,8 +1,10 @@
 package com.apitests.core;
 
+import com.google.inject.Singleton;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+@Singleton
 public class ServiceFactory {
 
     private String SERVER_URL = "http://192.168.0.13:8081";
